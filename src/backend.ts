@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 
+// Fonction pour afficher l'heure //
 export const currentTime = ref<string>(''); //Variable pour stocker l'heure actuelle
 
 // Fonction pour obtenir l'heure actuelle selon le fuseau horaire en AM/PM
@@ -16,3 +17,4 @@ function getCurrentTime() {
 getCurrentTime();
 // Met à jour l'heure toutes les minutes
 setInterval(getCurrentTime, 60000);
+////
