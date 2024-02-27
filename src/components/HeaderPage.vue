@@ -1,14 +1,33 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import { currentTime } from '@/backend'
 
 </script>
 
 <template>
-  <div class="flex justify-between">
+  <div class="p-5 flex justify-between items-center">
     <div>Maël Grosjean</div>
     <div>{{ currentTime }}</div>
-    <div class="menu__nav-toggle" onclick="document.body.classList.toggle('menu-open')" tabindex="0">
-      <div class="menu__nav-toggle-bar"></div>
+    <div class="menu__parent cursor-pointer m-2" onclick="document.body.classList.toggle('menu-open')" tabindex="0">
+      <div class="menu__nav-toggle">
+        <div class="menu__nav-toggle-bar"></div>
+      </div>
     </div>
   </div>
+  <nav class="menu">
+    <ul>
+      <li>
+        <RouterLink to="">Projets</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="">About</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="">Notes</RouterLink>
+      </li>
+      <li>
+        <a href="mailto:mael.gsn01@gmail.com">Contact</a>
+      </li>
+    </ul>
+  </nav>
 </template>
