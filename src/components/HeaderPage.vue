@@ -14,20 +14,21 @@ import { currentTime } from '@/backend'
       </div>
     </div>
   </div>
-  <nav class="menu">
-    <ul>
-      <li>
-        <RouterLink to="">Projets</RouterLink>
+  <nav class="menu bg-secondary-white">
+    <ul class="menu menu__list">
+      <li class="menu__item">
+        <RouterLink to="" class="menu__link">Projets</RouterLink>
       </li>
-      <li>
-        <RouterLink to="">About</RouterLink>
+      <li class="menu__item">
+        <RouterLink to="" class="menu__link">About</RouterLink>
       </li>
-      <li>
-        <RouterLink to="">Notes</RouterLink>
+      <li class="menu__item">
+        <RouterLink to="" class="menu__link">Notes</RouterLink>
       </li>
-      <li>
-        <a href="mailto:mael.gsn01@gmail.com">Contact</a>
+      <li class="menu__item">
+        <a href="mailto:mael.gsn01@gmail.com" class="menu__link">Contact</a>
       </li>
     </ul>
+    <div class="menu__center-pts bg-secondary-white"></div>
   </nav>
 </template>
