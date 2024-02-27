@@ -16,17 +16,17 @@ import { currentTime } from '@/backend'
   </div>
   <nav class="menu bg-secondary-white">
     <ul class="menu menu__list">
-      <li class="menu__item">
+      <li class="menu__item text-xl">
         <RouterLink to="" class="menu__link">Projets</RouterLink>
       </li>
-      <li class="menu__item">
+      <li class="menu__item text-xl">
         <RouterLink to="" class="menu__link">About</RouterLink>
       </li>
-      <li class="menu__item">
+      <li class="menu__item text-xl">
         <RouterLink to="" class="menu__link">Notes</RouterLink>
       </li>
-      <li class="menu__item">
-        <a href="mailto:mael.gsn01@gmail.com" class="menu__link">Contact</a>
+      <li class="menu__item text-xl">
+        <a href="mailto:mael.gsn01@gmail.com" class="menu__link underline">Contact</a>
       </li>
     </ul>
     <div class="menu__center-pts bg-secondary-white"></div>

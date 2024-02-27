@@ -6,11 +6,13 @@
 
 @font-face {
     font-family: "Uncut Sans";
-    src: url("fonts/uncutsans/UncutSans-Regular.otf") format("truetype");
+    src: url("src/assets/fonts/UncutSans-Variable.ttf") format("truetype");
    }
 
-@layer base {
-  body {
+body {
     font-family: 'Uncut Sans', sans-serif;
-  }
+}
+
+@layer base {
+  
 }
