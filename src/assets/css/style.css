@@ -13,6 +13,12 @@ body {
     font-family: 'Uncut Sans', sans-serif;
 }
 
-@layer base {
-  
+header {
+    color: #333333;
+}
+
+@layer components {
+  .current-time {
+    transform: translate(-50%, 0%);
+  }
 }

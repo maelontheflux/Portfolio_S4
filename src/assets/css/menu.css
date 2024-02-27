@@ -16,6 +16,14 @@
     opacity: 0;
 }
 
+@media (max-width: 768px) {
+    .menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    
+}
+
 .menu__link,
 .menu__item {
     display: grid;
