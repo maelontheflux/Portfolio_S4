@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { currentTime } from '@/backend'
 
+import icon_world from '@/components/icons/icon_world.vue'
+
 // Variable etat du menu
 const activeMenu = ref(false)
 // Fonction pour ouvrir/fermer le menu
@@ -15,7 +17,8 @@ function toggleMenu() {
 <template>
   <div class="p-5 sm:px-10 flex justify-between flex-wrap items-center font-bold text-lg">
     <a href="/">Maël Grosjean</a>
-    <div class="sm:current-time font-medium">
+    <div class="sm:current-time flex items-center gap-2 font-medium">
+      <icon_world class="w-8 h-8" />
       {{ currentTime }}
     </div>
     <div class="menu__parent cursor-pointer m-2" @click="toggleMenu" tabindex="0">

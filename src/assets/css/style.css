@@ -11,10 +11,22 @@
 
 body {
     font-family: 'Uncut Sans', sans-serif;
+    color: #141414;
 }
 
 header {
     color: #333333;
+    background-color: #edeae6;
+}
+
+footer {
+    background-color: #edeae6;
+}
+
+.footer__class {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 4vh;
 }
 
 @layer components {
