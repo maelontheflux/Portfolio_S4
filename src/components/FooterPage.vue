@@ -39,18 +39,18 @@ function deactivateMenu() {
       <div class="w-max absolute sm:bottom-0 right-0 items-center">
         <p class="cursor-pointer text-start origin-bottom-right rotate-[-90deg] sm:text-base ease-in duration-500 opacity-100" @mouseenter="activateMenu" @mouseleave="deactivateMenu" :class="{ '!opacity-0' : activeMenu }">FOLLOW THE CONTENT</p>
         <nav class="invisible opacity-0 ease-in duration-500" :class="{ '!visible opacity-100' : activeMenu }">
-          <ul class="underline grid gap-6 sm:gap-12" @mouseenter="activateMenu" @mouseleave="deactivateMenu">
+          <ul class="grid gap-6 sm:gap-12" @mouseenter="activateMenu" @mouseleave="deactivateMenu">
             <li>
-              <a href="">instagram</a>
+              <a href="" class="underline">instagram</a>
             </li>
             <li>
-              <a href="">behance</a>
+              <a href="" class="underline">behance</a>
             </li>
             <li>
-              <a href="">linkedIn</a>
+              <a href="" class="underline">linkedIn</a>
             </li>
             <li>
-              <a href="">twitter</a>
+              <a href="" class="underline">twitter</a>
             </li>
           </ul>
         </nav>
@@ -58,7 +58,7 @@ function deactivateMenu() {
     </div>
   </div>
 
-  <div class="max-sm:pt-0 pb-5 p-5 pl-[22%] font-semibold">
+  <div class="max-sm:pt-0 pb-5 p-5 pl-[22%] font-semibold sm:text-[18px]">
     <a href="">DOWNLOAD MY RESUME</a>
   </div>
 </template>

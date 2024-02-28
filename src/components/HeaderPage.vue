@@ -38,8 +38,8 @@ function toggleMenu() {
       <li class="menu__item text-xl">
         <RouterLink to="" class="menu__link" @click="toggleMenu">Notes</RouterLink>
       </li>
-      <li class="menu__item text-xl">
-        <a href="mailto:mael.gsn01@gmail.com" class="menu__link underline" @click="toggleMenu">Contact</a>
+      <li class="menu__item text-xl underline">
+        <a href="mailto:mael.gsn01@gmail.com" class="menu__link" @click="toggleMenu">Contact</a>
       </li>
     </ul>
     <div class="max-sm:hidden menu__center-pts bg-secondary-white"></div>
