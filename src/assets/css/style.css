@@ -25,8 +25,14 @@ footer {
 
 .footer__class {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 4fr 1fr;
     padding: 4vh;
+}
+
+@media (max-width: 768px) {
+    .footer__class {
+        padding: 2vh;
+    }
 }
 
 @layer components {
