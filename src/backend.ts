@@ -1,4 +1,7 @@
 import { ref } from 'vue';
+// Import Pocketbase
+// import PocketBase from 'pocketbase';
+// export const pb = new PocketBase('http://127.0.0.1:8090');
 
 // Fonction pour afficher l'heure //
 export const currentTime = ref<string>(''); //Variable pour stocker l'heure actuelle
