@@ -10,7 +10,7 @@ function getCurrentTime() {
   const minutes = date.getMinutes();
   const ampm = date.getHours() >= 12 ? 'PM' : 'AM'; // Détermine si c'est le matin ou l'après-midi
 
-  currentTime.value = `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
+  currentTime.value = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
 }
 
 // Appeler la fonction getCurrentTime

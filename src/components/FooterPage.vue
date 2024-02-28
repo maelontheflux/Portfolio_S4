@@ -7,7 +7,7 @@ import icon_world from '@/components/icons/icon_world.vue'
 
 <template>
   <div class="footer__class font-semibold">
-    <div class="ml-2 rotate-[-90deg] origin-left flex items-center gap-2 font-medium">
+    <div class="justify-end font-medium text-lg ml-2 rotate-[-90deg] origin-left flex items-center gap-2">
       <icon_world class="w-8 h-8" />
       {{ currentTime }}
     </div>
