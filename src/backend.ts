@@ -1,12 +1,15 @@
 import { ref } from 'vue';
 // Import Pocketbase
-// import PocketBase from 'pocketbase';
-// export const pb = new PocketBase('http://127.0.0.1:8090');
+import PocketBase from 'pocketbase';
+export const pb = new PocketBase('http://127.0.0.1:8090');
+
+import type { ProjetsRecord } from '@/pocketbase-types';
+// //
 
 // Fonction pour afficher l'heure //
 export const currentTime = ref<string>(''); //Variable pour stocker l'heure actuelle
 
-// Fonction pour obtenir l'heure actuelle selon le fuseau horaire en AM/PM
+// Fonction pour obtenir l'heure actuelle selon le fuseau horaire en AM/PM //
 function getCurrentTime() {
   const date = new Date();
   const hours = date.getHours() % 12 || 12; // Conversion en format 12 heures
@@ -20,4 +23,18 @@ function getCurrentTime() {
 getCurrentTime();
 // Met à jour l'heure toutes les minutes
 setInterval(getCurrentTime, 60000);
-////
+// //
+
+// Pocketbase //
+// Retourne tous les projets
+export async function allProject() {
+  const records = await pb.collection('projets').getFullList<ProjetsRecord>() ;
+  return records ;
+}
+
+// Retourne un projet par son id
+export async function OneProject(id : string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>(id) ;
+  return record ;
+}
+// //
