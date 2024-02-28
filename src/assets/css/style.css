@@ -49,6 +49,10 @@ a:hover::after {
   transform: translate3d(0, 0.2em, 0);
 }
 
+.center {
+    transform: translate(-50%, -50%);
+}
+
 .footer__class {
     display: grid;
     grid-template-columns: 4fr 1fr;

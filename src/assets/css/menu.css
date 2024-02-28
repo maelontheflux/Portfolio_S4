@@ -16,14 +16,6 @@
     opacity: 0;
 }
 
-@media (max-width: 768px) {
-    .menu {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-    
-}
-
 .menu__link,
 .menu__item {
     display: grid;
@@ -92,4 +84,16 @@
 .menu-open .menu__nav-toggle-bar::before {
     transform: rotate(90deg);
     top: 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding-top: 7vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .menu__item {
+        border: none;
+        border-bottom: 1px solid black;
+    }
 }
