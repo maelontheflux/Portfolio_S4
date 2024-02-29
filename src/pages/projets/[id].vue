@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { OneProject } from '@/backend.ts';
+import { OneProject } from '@/backend';
 import projetPage from '@/components/projetPage.vue';
 
 const props = defineProps<{

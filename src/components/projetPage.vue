@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 import { pb } from '@/backend';
+import { shuffle } from '@/animation'
+
 import type { ProjetsResponse } from '@/pocketbase-types';
 
 const props: ProjetsResponse = defineProps<ProjetsResponse>();
@@ -47,10 +48,11 @@ function handleMouseLeave() {
 // //
 </script>
 <template>
-    <div class="">
+    <div class="project__page">
         <img :src="urlImg_hero" alt="">
         <div class="px-14">
-            <div class="text-center sm:text-xl">{{ props.name }}</div>
+            <div class="text-center sm:text-xl" @mouseenter="shuffle($event.target)">{{ props.name }}</div>
+            <div class="" >HELP</div>
             <div class="text-end">
                 <div>{{ props.type }}</div>
                 <div>{{ props.categorie }}</div>
@@ -58,16 +60,16 @@ function handleMouseLeave() {
             </div>
             <div>{{ props.description1 }}</div>
             <div class="text-end">{{ props.description2 }}</div>
-            <div class="flex">
+            <div class="flex sm:w-[70%] lg:w-[50%]">
                 <img id="img1" class="animate--anim opacity-100 z-40 shadow-xl" :src="urlImg1_1" alt=""
                     @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave">
-                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[60%] shadow-xl" :src="urlImg1_2" alt=""
+                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[90%] shadow-xl" :src="urlImg1_2" alt=""
                     @mouseenter="handleMouseEnter(2)" @mouseleave="handleMouseLeave">
-                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[60%] shadow-xl" :src="urlImg1_3" alt=""
+                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[90%] shadow-xl" :src="urlImg1_3" alt=""
                     @mouseenter="handleMouseEnter(3)" @mouseleave="handleMouseLeave">
-                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[60%] shadow-xl" :src="urlImg1_4" alt=""
+                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[90%] shadow-xl" :src="urlImg1_4" alt=""
                     @mouseenter="handleMouseEnter(4)" @mouseleave="handleMouseLeave">
-                <img id="img5" class="animate--anim opacity-100 -ml-[50%] shadow-xl" :src="urlImg1_5" alt=""
+                <img id="img5" class="animate--anim opacity-100 -ml-[90%] shadow-xl" :src="urlImg1_5" alt=""
                     @mouseenter="handleMouseEnter(5)" @mouseleave="handleMouseLeave">
             </div>
             <div>{{ description3 }}</div>

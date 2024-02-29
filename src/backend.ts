@@ -1,4 +1,5 @@
 import { ref } from 'vue';
+
 // Import Pocketbase
 import PocketBase from 'pocketbase';
 export const pb = new PocketBase('http://127.0.0.1:8090');
@@ -28,13 +29,13 @@ setInterval(getCurrentTime, 60000);
 // Pocketbase //
 // Retourne tous les projets
 export async function allProject() {
-  const records = await pb.collection('projets').getFullList<ProjetsRecord>() ;
-  return records ;
+  const records = await pb.collection('projets').getFullList<ProjetsRecord>();
+  return records;
 }
 
 // Retourne un projet par son id
-export async function OneProject(id : string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>(id) ;
-  return record ;
+export async function OneProject(id: string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>(id);
+  return record;
 }
 // //
