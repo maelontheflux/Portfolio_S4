@@ -34,8 +34,20 @@ export async function allProject() {
 }
 
 // Retourne un projet par son id
-export async function OneProject(id: string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>(id);
+export async function ProjectCrac(id: string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>('01ajn7fzezgtj21');
+  return record;
+}
+export async function ProjectDuaLipa(id: string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>('4dzfg6gf6rxa30t');
+  return record;
+}
+export async function ProjectYumin(id: string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>('c2gk7ueq53e4a2j');
+  return record;
+}
+export async function ProjectStellaris(id: string) {
+  const record = await pb.collection('projets').getOne<ProjetsRecord>('835ek99cjob1jzp');
   return record;
 }
 // //
