@@ -19,6 +19,9 @@ const image2_3 = projet.image2_3;
 const image2_4 = projet.image2_4;
 const image2_5 = projet.image2_5;
 const image2_6 = projet.image2_6;
+const image3_1 = projet.image3_1;
+const image3_2 = projet.image3_2;
+const image3_3 = projet.image3_3;
 
 const urlImg_hero = pb.getFileUrl(projet, img_hero ?? '', { thumb: '400x400' });
 const urlImg1_1 = pb.getFileUrl(projet, image1_1 ?? '', { thumb: '400x400' });
@@ -32,6 +35,9 @@ const urlImg2_3 = pb.getFileUrl(projet, image2_3 ?? '', { thumb: '400x400' });
 const urlImg2_4 = pb.getFileUrl(projet, image2_4 ?? '', { thumb: '400x400' });
 const urlImg2_5 = pb.getFileUrl(projet, image2_5 ?? '', { thumb: '400x400' });
 const urlImg2_6 = pb.getFileUrl(projet, image2_6 ?? '', { thumb: '400x400' });
+const urlImg3_1 = pb.getFileUrl(projet, image3_1 ?? '', { thumb: '400x400' });
+const urlImg3_2 = pb.getFileUrl(projet, image3_2 ?? '', { thumb: '400x400' });
+const urlImg3_3 = pb.getFileUrl(projet, image3_3 ?? '', { thumb: '400x400' });
 
 // Gestionnaire d'événements pour le survol
 function handleMouseEnter(index: number) {
@@ -45,6 +51,7 @@ function handleMouseLeave() {
     for (let i = 1; i <= 6; i++) {
         document.getElementById(`img${i}`)?.classList.remove('animate-hover');
         document.getElementById(`img--scd${i}`)?.classList.remove('animate-hover');
+        document.getElementById(`img--thd${i}`)?.classList.remove('animate-hover');
     }
 }
 function handleMouseEnterScd(index: number) {
@@ -54,47 +61,63 @@ function handleMouseEnterScd(index: number) {
         }
     }
 }
+function handleMouseEnterThd(index: number) {
+    for (let i = 1; i <= 3; i++) {
+        if (i !== index) {
+            document.getElementById(`img--thd${i}`)?.classList.add('animate-hover');
+        }
+    }
+}
 // //
 </script>
 <template>
     <div class="project__page">
         <img :src="urlImg_hero" alt="Image d'illustration principal du projet">
-        <div class="px-4 sm:px-14">
-            <div class="text-center font-bold sm:mt-14 sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
-            <div class="text-end">
+        <div class="px-4 py-5 sm:px-14 sm:py-14">
+            <div class="text-center font-bold text-[30px] sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
+            <div class="text-end mt-10 sm:mt-20">
                 <div class="">{{ projet.type }}</div>
                 <div class="-mt-1">{{ projet.categorie }}</div>
                 <div class="-mt-1">{{ projet.date }}</div>
             </div>
-            <div class="max-w-[1110px]">{{ projet.description1 }}</div>
-            <div class="text-end">{{ projet.description2 }}</div>
-            <div class="flex w-[70%] lg:w-[50%]">
-                <img id="img1" class="animate--anim opacity-100 z-40 drop-shadow-2xl" :src="urlImg1_1" alt="Image du projet"
+            <div class="max-w-[1120px] mt-14 sm:mt-24">{{ projet.description1 }}</div>
+            <div class="flex justify-end">
+                <div class="text-end max-w-[610px] mt-14 sm:mt-40">{{ projet.description2 }}</div>
+            </div>
+            <div class="flex mt-14 sm:mt-24 w-[80%] lg:w-[60%]">
+                <img id="img1" class="animate--anim opacity-100 z-40" :src="urlImg1_1" alt="Image du projet"
                     @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave">
-                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[90%] drop-shadow-2xl" :src="urlImg1_2" alt="Image du projet"
+                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[92%]" :src="urlImg1_2" alt="Image du projet"
                     @mouseenter="handleMouseEnter(2)" @mouseleave="handleMouseLeave">
-                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[90%] drop-shadow-2xl" :src="urlImg1_3" alt="Image du projet"
+                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[92%]" :src="urlImg1_3" alt="Image du projet"
                     @mouseenter="handleMouseEnter(3)" @mouseleave="handleMouseLeave">
-                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[90%] drop-shadow-2xl" :src="urlImg1_4" alt="Image du projet"
+                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[92%]" :src="urlImg1_4" alt="Image du projet"
                     @mouseenter="handleMouseEnter(4)" @mouseleave="handleMouseLeave">
-                <img id="img5" class="animate--anim opacity-100 -ml-[90%] drop-shadow-2xl" :src="urlImg1_5" alt="Image du projet"
+                <img id="img5" class="animate--anim opacity-100 -ml-[92%]" :src="urlImg1_5" alt="Image du projet"
                     @mouseenter="handleMouseEnter(5)" @mouseleave="handleMouseLeave">
             </div>
-            <div>{{ projet.description3 }}</div>
-            <div class="flex w-[60%] lg:w-[40%]">
-                <img id="img--scd1" class="animate--anim opacity-100 z-50 drop-shadow-2xl" :src="urlImg2_1" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[88%] drop-shadow-2xl" :src="urlImg2_2" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[88%] drop-shadow-2xl" :src="urlImg2_3" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
-                <img id="img--scd4" class="animate--anim opacity-100 z-20 -ml-[88%] drop-shadow-2xl" :src="urlImg2_4" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(4)" @mouseleave="handleMouseLeave">
-                <img id="img--scd5" class="animate--anim opacity-100 z-10 -ml-[88%] drop-shadow-2xl" :src="urlImg2_5" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(5)" @mouseleave="handleMouseLeave">
-                <img id="img--scd6" class="animate--anim opacity-100 -ml-[88%] drop-shadow-2xl" :src="urlImg2_6" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(6)" @mouseleave="handleMouseLeave">
+            <div class="flex justify-end">
+                <div class="text-end max-w-[1000px] mt-14 sm:mt-40">{{ projet.description3 }}</div>
             </div>
+            <div class="flex mt-16 sm:mt-36 w-[80%] lg:w-[58%]">
+                <img id="img--scd1" class="animate--anim opacity-100 z-50" :src="urlImg2_1" alt="Image du projet"
+                    @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
+                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg2_2" alt="Image du projet"
+                    @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
+                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg2_3" alt="Image du projet"
+                    @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
+               </div>
+            <div class="flex justify-end">
+                <div class="text-end max-w-[800px] mt-14 sm:mt-40">{{ projet.description4 }}</div>
+            </div>
+            <div class="flex mt-16 sm:mt-36 mb-16 w-[80%] lg:w-[58%]">
+                <img id="img--thd1" class="animate--anim opacity-100 z-50" :src="urlImg3_1" alt="Image du projet"
+                    @mouseenter="handleMouseEnterThd(1)" @mouseleave="handleMouseLeave">
+                <img id="img--thd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg3_2" alt="Image du projet"
+                    @mouseenter="handleMouseEnterThd(2)" @mouseleave="handleMouseLeave">
+                <img id="img--thd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg3_3" alt="Image du projet"
+                    @mouseenter="handleMouseEnterThd(3)" @mouseleave="handleMouseLeave">
+                </div>
         </div>
     </div>
 </template>

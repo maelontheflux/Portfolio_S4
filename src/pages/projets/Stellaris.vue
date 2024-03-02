@@ -59,40 +59,44 @@ function handleMouseEnterScd(index: number) {
 <template>
     <div class="project__page">
         <img :src="urlImg_hero" alt="Image d'illustration principal du projet">
-        <div class="px-4 sm:px-14">
-            <div class="text-center font-bold sm:mt-14 sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
-            <div class="text-end">
+        <div class="px-4 py-5 sm:px-14 sm:py-14">
+            <div class="text-center font-bold text-[30px] sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
+            <div class="text-end mt-10 sm:mt-20">
                 <div class="">{{ projet.type }}</div>
                 <div class="-mt-1">{{ projet.categorie }}</div>
                 <div class="-mt-1">{{ projet.date }}</div>
             </div>
-            <div class="max-w-[1110px]">{{ projet.description1 }}</div>
-            <div class="text-end">{{ projet.description2 }}</div>
-            <div class="flex w-[70%] lg:w-[50%]">
+            <div class="max-w-[1090px] mt-14 sm:mt-24">{{ projet.description1 }}</div>
+            <div class="flex justify-end">
+                <div class="text-end max-w-[630px] mt-14 sm:mt-40">{{ projet.description2 }}</div>
+            </div>
+            <div class="flex mt-14 sm:mt-24 w-[65%] lg:w-[40%]">
                 <img id="img1" class="animate--anim opacity-100 z-40 drop-shadow-2xl" :src="urlImg1_1" alt="Image du projet"
                     @mouseenter="handleMouseEnter(1)" @mouseleave="handleMouseLeave">
-                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[90%] drop-shadow-2xl" :src="urlImg1_2" alt="Image du projet"
+                <img id="img2" class="animate--anim opacity-100 z-30 -ml-[88%] drop-shadow-2xl" :src="urlImg1_2" alt="Image du projet"
                     @mouseenter="handleMouseEnter(2)" @mouseleave="handleMouseLeave">
-                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[90%] drop-shadow-2xl" :src="urlImg1_3" alt="Image du projet"
+                <img id="img3" class="animate--anim opacity-100 z-20 -ml-[88%] drop-shadow-2xl" :src="urlImg1_3" alt="Image du projet"
                     @mouseenter="handleMouseEnter(3)" @mouseleave="handleMouseLeave">
-                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[90%] drop-shadow-2xl" :src="urlImg1_4" alt="Image du projet"
+                <img id="img4" class="animate--anim opacity-100 z-10 -ml-[88%] drop-shadow-2xl" :src="urlImg1_4" alt="Image du projet"
                     @mouseenter="handleMouseEnter(4)" @mouseleave="handleMouseLeave">
-                <img id="img5" class="animate--anim opacity-100 -ml-[90%] drop-shadow-2xl" :src="urlImg1_5" alt="Image du projet"
+                <img id="img5" class="animate--anim opacity-100 -ml-[88%] drop-shadow-2xl" :src="urlImg1_5" alt="Image du projet"
                     @mouseenter="handleMouseEnter(5)" @mouseleave="handleMouseLeave">
             </div>
-            <div>{{ projet.description3 }}</div>
-            <div class="flex w-[60%] lg:w-[40%]">
+            <div class="flex justify-end">
+                <div class="text-end max-w-[1300px] mt-14 sm:mt-40">{{ projet.description3 }}</div>
+            </div>
+            <div class="flex mt-16 sm:mt-36 mb-16 w-[65%] lg:w-[40%]">
                 <img id="img--scd1" class="animate--anim opacity-100 z-50 drop-shadow-2xl" :src="urlImg2_1" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[88%] drop-shadow-2xl" :src="urlImg2_2" alt="Image du projet"
+                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[90%] drop-shadow-2xl" :src="urlImg2_2" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[88%] drop-shadow-2xl" :src="urlImg2_3" alt="Image du projet"
+                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[90%] drop-shadow-2xl" :src="urlImg2_3" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
-                <img id="img--scd4" class="animate--anim opacity-100 z-20 -ml-[88%] drop-shadow-2xl" :src="urlImg2_4" alt="Image du projet"
+                <img id="img--scd4" class="animate--anim opacity-100 z-20 -ml-[90%] drop-shadow-2xl" :src="urlImg2_4" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(4)" @mouseleave="handleMouseLeave">
-                <img id="img--scd5" class="animate--anim opacity-100 z-10 -ml-[88%] drop-shadow-2xl" :src="urlImg2_5" alt="Image du projet"
+                <img id="img--scd5" class="animate--anim opacity-100 z-10 -ml-[90%] drop-shadow-2xl" :src="urlImg2_5" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(5)" @mouseleave="handleMouseLeave">
-                <img id="img--scd6" class="animate--anim opacity-100 -ml-[88%] drop-shadow-2xl" :src="urlImg2_6" alt="Image du projet"
+                <img id="img--scd6" class="animate--anim opacity-100 -ml-[90%] drop-shadow-2xl" :src="urlImg2_6" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(6)" @mouseleave="handleMouseLeave">
             </div>
         </div>

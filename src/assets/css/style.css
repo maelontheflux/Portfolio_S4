@@ -97,7 +97,7 @@ a:hover::after {
   color: #edeae6;
   font-size: 1.875rem;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .animate-hover {
@@ -105,6 +105,11 @@ a:hover::after {
 }
 .animate--anim {
   transition: opacity 1s ease;
+  filter: blur(1.5px);
+  box-shadow: 3px 0 16px 0 rgba(0, 0, 0, 0.25);
+}
+.animate--anim:hover {
+  filter: blur(0);
 }
 
 @media (max-width: 768px) {
