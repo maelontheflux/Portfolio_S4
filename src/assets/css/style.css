@@ -44,14 +44,25 @@ a::after {
     transition-duration: 300ms;
 }
 
-a:hover {
+.link:hover {
     text-decoration: none;
     transition-duration: 300ms;
 }
-
 .link:hover::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
+}
+.link--contactme{
+  position: relative;
+}
+.link--contactme::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #edeae6;
+  position: absolute;
+  bottom: -0.2em;
 }
 
 .center {

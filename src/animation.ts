@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 
-export function shuffle(input: HTMLElement) {
+export function shuffle(input : HTMLElement) {
     let originalText = input.innerText;
     let originalLength = originalText.length;
 
@@ -11,7 +11,7 @@ export function shuffle(input: HTMLElement) {
         const alphabet = "abcdefghijklmnopqrstuvwxyz";
         const allCharacters = [...characters, ...alphabet];
         
-        for (let i = 0; i < originalLength; i++) {
+        for (let i = 0; i <= originalLength; i++) {
             const randomIndex = Math.floor(Math.random() * allCharacters.length);
             shuffledText += allCharacters[randomIndex];
         }
@@ -19,19 +19,23 @@ export function shuffle(input: HTMLElement) {
     }
 
     input.addEventListener('mouseenter', () => {
-        // Définir une boucle infinie pour générer un texte mélangé aléatoire
+        // Boucle infinie pour générer un texte mélangé aléatoire
         let animation = gsap.to(input, { 
             repeat: -1,
             ease: "easeInOutQuad",
             onUpdate: () => {
                 input.innerText = generateShuffledText();
+            },
+            onComplete: () => {
+                input.innerText = originalText;
+                animation.kill();
             }
         });
 
-        // Stopper l'animation lorsque le curseur quitte l'élément
+        // Stopper l'animation
         setTimeout(() => {
-            animation.kill();
             input.innerText = originalText;
+            animation.kill();
         }, 400);
     });
 }
