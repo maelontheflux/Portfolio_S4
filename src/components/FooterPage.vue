@@ -31,7 +31,7 @@ function deactivateMenu() {
       <div class="sm:text-base self-end lg:mt-[40%]">
         <p>Want to know more or have a</p>
         <p class="-mt-1 -mb-1 sm:-mt-2 sm:-mb-2">project in mind ?</p>
-        <a href="mailto:mael.gsn01@gmail.com" class="underline">Let's Connect</a>
+        <a href="mailto:mael.gsn01@gmail.com" class="underline link">Let's Connect</a>
       </div>
     </div>
     <div class="text-end relative">
@@ -41,16 +41,16 @@ function deactivateMenu() {
         <nav class="invisible opacity-0 ease-in duration-500" :class="{ '!visible opacity-100' : activeMenu }">
           <ul class="grid gap-6 sm:gap-12" @mouseenter="activateMenu" @mouseleave="deactivateMenu">
             <li>
-              <a href="" class="underline">instagram</a>
+              <a href="" class="underline link">instagram</a>
             </li>
             <li>
-              <a href="" class="underline">behance</a>
+              <a href="" class="underline link">behance</a>
             </li>
             <li>
-              <a href="" class="underline">linkedIn</a>
+              <a href="" class="underline link">linkedIn</a>
             </li>
             <li>
-              <a href="" class="underline">twitter</a>
+              <a href="" class="underline link">twitter</a>
             </li>
           </ul>
         </nav>
@@ -59,6 +59,6 @@ function deactivateMenu() {
   </div>
 
   <div class="max-sm:pt-0 pb-5 p-5 pl-[22%] font-semibold sm:text-[18px]">
-    <a href="">DOWNLOAD MY RESUME</a>
+    <a href="" class="link">DOWNLOAD MY RESUME</a>
   </div>
 </template>

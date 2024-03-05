@@ -49,7 +49,7 @@ a:hover {
     transition-duration: 300ms;
 }
 
-a:hover::after {
+.link:hover::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
