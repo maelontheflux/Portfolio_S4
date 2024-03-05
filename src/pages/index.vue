@@ -11,9 +11,11 @@ import { RouterLink } from 'vue-router'
     </div>
   </div>
 
-  <RouterLink to="">
-    <article>
-    
-    </article>
-  </RouterLink>
+  <section id="projets">
+    <RouterLink to="">
+      <article>
+        
+      </article>
+    </RouterLink>
+  </section>
 </template>

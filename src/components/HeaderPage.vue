@@ -34,13 +34,13 @@ function toggleMenu() {
     </div>
     <ul class="menu menu__list text-[40px] sm:text-xl" v-scroll-lock="activeMenu">
       <li class="menu__item">
-        <RouterLink to="" class="menu__link" @click="toggleMenu">Projets</RouterLink>
+        <RouterLink to="/#projets" class="menu__link" @click="toggleMenu">Projets</RouterLink>
       </li>
       <li class="menu__item">
-        <RouterLink to="" class="menu__link" @click="toggleMenu">About</RouterLink>
+        <RouterLink to="/about" class="menu__link" @click="toggleMenu">About</RouterLink>
       </li>
       <li class="menu__item">
-        <RouterLink to="" class="menu__link" @click="toggleMenu">Notes</RouterLink>
+        <RouterLink to="/notes" class="menu__link" @click="toggleMenu">Notes</RouterLink>
       </li>
       <li class="menu__item underline">
         <a href="mailto:mael.gsn01@gmail.com" class="menu__link" @click="toggleMenu">Contact</a>
