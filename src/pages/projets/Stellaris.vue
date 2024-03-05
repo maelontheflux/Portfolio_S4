@@ -58,7 +58,7 @@ function handleMouseEnterScd(index: number) {
 </script>
 <template>
     <div class="project__page">
-        <img :src="urlImg_hero" alt="Image d'illustration principal du projet">
+        <img class="-mt-[10%]" :src="urlImg_hero" alt="Image d'illustration principal du projet">
         <div class="px-4 py-5 sm:px-14 sm:py-14">
             <div class="text-center font-bold text-[30px] sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
             <div class="text-end mt-10 sm:mt-20">
