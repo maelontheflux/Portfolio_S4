@@ -59,6 +59,6 @@ function deactivateMenu() {
   </div>
 
   <div class="max-sm:pt-0 pb-5 p-5 pl-[22%] font-semibold sm:text-[18px]">
-    <a href="" class="link">DOWNLOAD MY RESUME</a>
+    <a href="/file/CV_UX_DESIGNER_MAEL_GROSJEAN.pdf" download="CV_UX_DESIGNER_MAEL_GROSJEAN.pdf" class="link">DOWNLOAD MY RESUME</a>
   </div>
 </template>
