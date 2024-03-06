@@ -8,9 +8,9 @@ import FooterPage from './components/FooterPage.vue';
 onMounted(() => {
   const cursor = document.querySelector('.cursor');
   
-  document.addEventListener('mousemove', (e) => {
+  document.addEventListener('mousemove', e => {
     if (cursor) {
-      cursor.setAttribute("style", `top: ${e.pageY - 30}px; left: ${e.pageX - 30}px;`);
+      cursor.setAttribute("style", `top: ${e.pageY - window.scrollY - 30}px; left: ${e.pageX - 30}px;`);
     }
   });
 });
