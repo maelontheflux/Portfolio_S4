@@ -1,5 +1,7 @@
 import { gsap } from 'gsap';
+//
 
+// Fonction pour animer le texte
 export function shuffle(input : HTMLElement) {
     let originalText = input.innerText;
     let originalLength = originalText.length;
@@ -39,3 +41,4 @@ export function shuffle(input : HTMLElement) {
         }, 400);
     });
 }
+
