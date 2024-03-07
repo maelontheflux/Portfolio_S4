@@ -7,3 +7,8 @@ PSW: Qs!j0#svZZ
 USER: jean.jardin@portflio.com
 
 PSW: Ratata25mmi*
+
+3.
+USER: Notes
+
+PSW: Secret25mmi*
