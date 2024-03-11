@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import ProjetHome from '@/components/ProjetHome.vue';
+import { allProject } from '@/backend';
 
+const projects = await allProject();
 </script>
 
 <template>
@@ -12,10 +15,6 @@ import { RouterLink } from 'vue-router'
   </div>
 
   <section id="projets">
-    <RouterLink to="">
-      <article>
-        
-      </article>
-    </RouterLink>
+    <ProjetHome v-for="project in projects" v-bind="{ ...project }"/>
   </section>
 </template>

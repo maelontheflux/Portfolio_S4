@@ -33,7 +33,10 @@ export type AuthSystemFields<T = never> = {
 
 export type ProjetsRecord = {
 	image_hero?: string
+	image_loop?: string
 	name?: string
+	page_name?: string
+	work_type?: string
 	type?: string
 	categorie?: string
 	date?: string

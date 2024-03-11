@@ -129,15 +129,6 @@ a::after {
   filter: blur(0);
 }
 
-@media (max-width: 768px) {
-  .footer__class {
-      padding: 2vh;
-  }
-  .project__page {
-      font-size: 1.125rem;
-  }
-}
-
 /* Cursor */
 
 .cursor {
@@ -151,4 +142,16 @@ a::after {
 
 .cursor circle {
   fill: white;
+}
+
+@media (max-width: 768px) {
+  .footer__class {
+      padding: 2vh;
+  }
+  .project__page {
+      font-size: 1.125rem;
+  }
+  .cursor {
+      display: none;
+  }
 }
