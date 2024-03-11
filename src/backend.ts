@@ -32,7 +32,11 @@ export async function allProject() {
   const records = await pb.collection('projets').getFullList<ProjetsRecord>();
   return records;
 }
-
+// Retourne toutes les notes
+export async function allNotes() {
+  const records = await pb.collection('Notes').getFullList<ProjetsRecord>();
+  return records;
+}
 // Retourne un projet par son id
 export async function ProjectCrac(id: string) {
   const record = await pb.collection('projets').getOne<ProjetsRecord>('01ajn7fzezgtj21');
