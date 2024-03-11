@@ -26,28 +26,32 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
             </div>
         </article>
     </RouterLink>
-    <div class="h-[140px] w-full overflow-hidden relative">
+    <!-- <div class="max-h-[140px] w-full overflow-hidden relative">
         <div class="mask-project" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
 
-            <div class="scrollable-content" data-module="marquee">
-                <div v-for="i in 5" class="flex items-center text-xl font-bold">
+            <div class="scrollable-content">
+                <div v-for="i in 7" class="flex items-center text-xl font-bold">
                     <div>{{ name }}</div>
                     <img :src="urlImg_loop" alt="">
                 </div>
             </div>
 
         </div>
-    </div>
+    </div> -->
     
 </template>
 
 <style scoped>
-.mask-project {
+/* .mask-project {
     width: 100%;
     height: 100%;
     background-size: 100%;
     background-position: center;
-    background-blend-mode: overlay;
+    transition: all 0.5s ease-in-out;
+}
+
+.mask-project:hover{
+    background-color: #141414;
 }
 
 .scrollable-content {
@@ -68,5 +72,5 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
     100% {
         transform: translateX(-100%);
     }
-}
+} */
 </style>
