@@ -2,7 +2,15 @@ import { ref } from 'vue';
 
 // Import Pocketbase
 import PocketBase from 'pocketbase';
-export const pb = new PocketBase('http://127.0.0.1:8090');
+// PocketBase vps connection
+var pocketbase_ip=''
+if(import.meta.env.MODE === 'production')
+  pocketbase_ip=''
+else
+  pocketbase_ip='http://127.0.0.1:8090'
+
+export const pb = new PocketBase(pocketbase_ip);
+//
 
 import type { ProjetsResponse, NotesResponse } from '@/pocketbase-types';
 // //
