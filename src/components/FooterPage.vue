@@ -37,20 +37,20 @@ function deactivateMenu() {
     <div class="text-end relative">
       <span class="sm:text-base font-medium mr-2">EN</span>
       <div class="w-max absolute sm:bottom-0 right-0 items-center">
-        <p class="cursor-pointer text-start origin-bottom-right rotate-[-90deg] sm:text-base ease-in duration-500 opacity-100" @mouseenter="activateMenu" @mouseleave="deactivateMenu" :class="{ '!opacity-0' : activeMenu }">FOLLOW THE CONTENT</p>
+        <p class="text-start origin-bottom-right rotate-[-90deg] sm:text-base ease-in duration-500 opacity-100" @mouseenter="activateMenu" @mouseleave="deactivateMenu" :class="{ '!opacity-0' : activeMenu }">FOLLOW THE CONTENT</p>
         <nav class="invisible opacity-0 ease-in duration-500" :class="{ '!visible opacity-100' : activeMenu }">
           <ul class="grid gap-6 sm:gap-12" @mouseenter="activateMenu" @mouseleave="deactivateMenu">
             <li>
-              <a href="" class="underline link">instagram</a>
+              <a href="https://www.instagram.com/kimuraka.art/" class="underline link">instagram</a>
             </li>
             <li>
-              <a href="" class="underline link">behance</a>
+              <a href="https://www.behance.net/3f9a52a9?locale=fr_FR" class="underline link">behance</a>
             </li>
             <li>
-              <a href="" class="underline link">linkedIn</a>
+              <a href="https://www.linkedin.com/in/ma%C3%ABl-grosjean-5251a7253/" class="underline link">linkedIn</a>
             </li>
             <li>
-              <a href="" class="underline link">twitter</a>
+              <a href="https://twitter.com/maelonthefluxv1" class="underline link">twitter</a>
             </li>
           </ul>
         </nav>
