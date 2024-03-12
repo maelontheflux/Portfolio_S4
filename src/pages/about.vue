@@ -9,7 +9,7 @@ const motMael = ref(false);
 <template>
     <div class="bg-main-black text-secondary-white font-medium p-5 pt-8 pb-12 sm:p-20 xl:p-40">
         <div class="max-w-[1400px] text-[25px] max-sm:leading-9 sm:text-[36px] lg:leading-[72px] lg:text-[58px]">
-            <p>Hello, my name is <span v-if="!motMael" @mouseenter="motMael = true" class="hover:hidden">Maël</span><span v-if="motMael" @mouseleave="motMael = false">2036</span> Grosjean, student designer based in Montbéliard and Le Locle.</p>
+            <p>Hello, my name is <span v-if="!motMael" @mouseenter="motMael = true" class="hover:hidden">Maël</span><span v-if="motMael" @mouseleave="motMael = false">2036*</span> Grosjean, student designer based in Montbéliard and Le Locle.</p>
             <p>I create brand identities, design websites.</p>
         </div>
         <div class="max-w-[1400px] text-[18px] sm:text-[22px] lg:text-[38px] mt-5 lg:mt-10">
