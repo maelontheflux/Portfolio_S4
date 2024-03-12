@@ -35,27 +35,3 @@ const listeNotes = await allNotes();
         </div>
     </div>
 </template>
-
-<style scoped>
-.notes__grille {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2vh;
-    padding: 6vh 0 6vh 0;
-}
-@media (min-width: 768px) {
-    .notes__grille {
-        grid-template-columns: 1fr 1fr;
-        gap: 7vh;
-        padding: 6vh;
-    }
-}
-.notes__social-link {
-    text-decoration: underline;
-    opacity: 0.7;
-    transition: all 0.25s;
-}
-.notes__social-link:hover {
-    opacity: 1;
-}
-</style>
