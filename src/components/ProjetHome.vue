@@ -14,7 +14,7 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
 
 <template>
     <RouterLink :to="'/projets/' + page_name">
-        <article class="relative">
+        <article class="interactive relative">
             <img :src="urlImg0" :alt="name + 'cover'">
             <div
                 class="absolute bottom-[5%] left-[4%] uppercase text-sm md:text-[35px] font-bold text-secondary-white mix-blend-difference">
@@ -26,7 +26,7 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
             </div>
         </article>
     </RouterLink>
-    <!-- <div class="max-h-[140px] w-full overflow-hidden relative">
+    <div class="max-h-[140px] w-full overflow-hidden relative">
         <div class="mask-project" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
 
             <div class="scrollable-content">
@@ -37,12 +37,12 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
             </div>
 
         </div>
-    </div> -->
+    </div>
     
 </template>
 
 <style scoped>
-/* .mask-project {
+.mask-project {
     width: 100%;
     height: 100%;
     background-size: 100%;
@@ -72,5 +72,5 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
     100% {
         transform: translateX(-100%);
     }
-} */
+}
 </style>

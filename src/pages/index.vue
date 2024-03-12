@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import ProjetHome from '@/components/ProjetHome.vue';
 import { allProject } from '@/backend';
 

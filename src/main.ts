@@ -21,20 +21,3 @@ app.use(V3ScrollLock, {})
 app.use(VueSmoothScroll)
 
 app.mount('#app')
-
-import { onMounted } from 'vue';
-
-export default {
-  setup() {
-    onMounted(() => {
-      const cursor = document.querySelector('.cursor');
-      document.addEventListener('mousemove', e => {
-        if (cursor) {
-          cursor.setAttribute("style", `top: ${e.pageY - 10}px; left: ${e.pageX - 10}px;`);
-        }
-      });
-    });
-
-    return {};
-  }
-};
