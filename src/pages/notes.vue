@@ -24,7 +24,7 @@ const listeNotes = await allNotes();
                     <li><a class="notes__social-link" href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
                     <li><a class="notes__social-link" href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
                 </ul>
-                <ul class="space-y-3 ">
+                <ul class="space-y-3">
                     <li><a class="notes__social-link"
                             href="https://apps.apple.com/us/app/airbuds-widget/id1638906106">Airbuds</a></li>
                     <li><a class="notes__social-link"

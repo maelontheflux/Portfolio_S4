@@ -54,39 +54,3 @@
         </form>
     </div>
 </template>
-
-<style scoped>
-.input__contact {
-    background: none;
-    color: #edeae6;
-    border-bottom: 2px solid #edeae6;
-    opacity: 0.6;
-    outline: none;
-}
-.input__contact:focus {
-    opacity: 1;
-}
-.list__input {
-    position: relative;
-}
-.label__contact {
-    font-weight: 500;
-    cursor: pointer;
-}
-.list__input input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-}
-.list__input input[type="checkbox"] + .label__contact::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #edeae6;
-    opacity: 0.5;
-    margin-top: 2px;
-}
-.list__input input[type="checkbox"]:checked + .label__contact::after {
-    opacity: 1;
-}
-</style>

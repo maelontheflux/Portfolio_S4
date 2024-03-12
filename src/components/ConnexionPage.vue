@@ -49,8 +49,8 @@ function toggleHelp() {
                     <label for="password" class="text-[40px]">Enter password</label>
                     <div class="mt-10">
                         <input v-model="password" type="password" name="password" id="password" autocomplete="none"
-                            placeholder="Here" required class="w-full">
-                        <div @click="toggleHelp" class="mt-1">
+                            placeholder="Here" required class="w-full input__contact input__note">
+                        <div @click="toggleHelp" class="mt-2">
                             <span v-if="!activeHelp">Help</span>
                             <span v-else>4 digits on the site</span>
                         </div>
