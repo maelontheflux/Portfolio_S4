@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import PocketBase from 'pocketbase';
 export const pb = new PocketBase('http://127.0.0.1:8090');
 
-import type { ProjetsRecord } from '@/pocketbase-types';
+import type { ProjetsRecord, NotesRecord } from '@/pocketbase-types';
 // //
 
 // Fonction pour afficher l'heure //
@@ -34,7 +34,7 @@ export async function allProject() {
 }
 // Retourne toutes les notes
 export async function allNotes() {
-  const records = await pb.collection('Notes').getFullList<ProjetsRecord>();
+  const records = await pb.collection('Notes').getFullList<NotesRecord>();
   return records;
 }
 // Retourne un projet par son id
