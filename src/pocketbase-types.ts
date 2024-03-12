@@ -3,7 +3,7 @@
 */
 
 export enum Collections {
-	Notes = "Notes",
+	Notes = "notes",
 	Projets = "projets",
 	Users = "users",
 }
@@ -33,7 +33,7 @@ export type AuthSystemFields<T = never> = {
 // Record types for each collection
 
 export type NotesRecord = {
-	Name?: string
+	name?: string
 	image?: string
 }
 
@@ -79,13 +79,13 @@ export type UsersResponse = Required<UsersRecord> & AuthSystemFields
 // Types containing all Records and Responses, useful for creating typing helper functions
 
 export type CollectionRecords = {
-	Notes: NotesRecord
+	notes: NotesRecord
 	projets: ProjetsRecord
 	users: UsersRecord
 }
 
 export type CollectionResponses = {
-	Notes: NotesResponse
+	notes: NotesResponse
 	projets: ProjetsResponse
 	users: UsersResponse
 }

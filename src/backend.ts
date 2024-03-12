@@ -4,7 +4,7 @@ import { ref } from 'vue';
 import PocketBase from 'pocketbase';
 export const pb = new PocketBase('http://127.0.0.1:8090');
 
-import type { ProjetsRecord, NotesRecord } from '@/pocketbase-types';
+import type { ProjetsResponse, NotesResponse } from '@/pocketbase-types';
 // //
 
 // Fonction pour afficher l'heure //
@@ -29,29 +29,29 @@ setInterval(getCurrentTime, 60000);
 // Pocketbase //
 // Retourne tous les projets
 export async function allProject() {
-  const records = await pb.collection('projets').getFullList<ProjetsRecord>();
+  const records = await pb.collection('projets').getFullList<ProjetsResponse>();
   return records;
 }
 // Retourne toutes les notes
 export async function allNotes() {
-  const records = await pb.collection('Notes').getFullList<NotesRecord>();
+  const records = await pb.collection('notes').getFullList<NotesResponse>();
   return records;
 }
 // Retourne un projet par son id
 export async function ProjectCrac(id: string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>('01ajn7fzezgtj21');
+  const record = await pb.collection('projets').getOne<ProjetsResponse>('01ajn7fzezgtj21');
   return record;
 }
 export async function ProjectDuaLipa(id: string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>('4dzfg6gf6rxa30t');
+  const record = await pb.collection('projets').getOne<ProjetsResponse>('4dzfg6gf6rxa30t');
   return record;
 }
 export async function ProjectYumin(id: string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>('c2gk7ueq53e4a2j');
+  const record = await pb.collection('projets').getOne<ProjetsResponse>('c2gk7ueq53e4a2j');
   return record;
 }
 export async function ProjectStellaris(id: string) {
-  const record = await pb.collection('projets').getOne<ProjetsRecord>('835ek99cjob1jzp');
+  const record = await pb.collection('projets').getOne<ProjetsResponse>('835ek99cjob1jzp');
   return record;
 }
 // //

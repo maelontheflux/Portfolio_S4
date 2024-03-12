@@ -1,39 +1,61 @@
 <script setup lang="ts">
 import { pb } from '@/backend';
-import type { NotesResponse } from '@/pocketbase-types';
 import { allNotes } from '@/backend';
 
 const listeNotes = await allNotes();
-const props: NotesResponse = defineProps<NotesResponse>();
-const img0 = props.image;
-const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '400x400' });
 
 </script>
 
 <template>
-    <div class="p-5">
-        <div class="sm:text-center">
-            <h1>You are in the hideout, stay discreet!</h1>
-            <p>My projects and personal networks are hidden here !</p>
+    <div class="p-5 bg-main-black text-secondary-white">
+        <div class="md:text-center mt-5 md:mt-28">
+            <h1 class="text-lg max-sm:leading-8 sm:text-[58px]">You are in the hideout, stay discreet!</h1>
+            <p class="mt-4 text-base max-sm:leading-8 sm:text-[38px]">My projects and personal networks are hidden here!</p>
         </div>
 
-        <div class="flex gap-10 justify-center">
-            <ul class="text-end">
-                <li><a href="https://www.instagram.com/kimuraka.art/">Instagram</a></li>
-                <li><a href="https://twitter.com/maelonthefluxv1">Twitter</a></li>
-                <li><a href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
-                <li><a href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
+        <div class="grid grid-cols-2 gap-10 sm:gap-20 text-base sm:text-[35px] mt-8 sm:mb-5">
+            <ul class="text-end space-y-3 ">
+                <li class="notes__social-link"><a href="https://www.instagram.com/kimuraka.art/">Instagram</a></li>
+                <li class="notes__social-link"><a href="https://twitter.com/maelonthefluxv1">Twitter</a></li>
+                <li class="notes__social-link"><a href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
+                <li class="notes__social-link"><a href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
             </ul>
-            <ul>
-                <li><a href="https://apps.apple.com/us/app/airbuds-widget/id1638906106">Airbuds</a></li>
-                <li><a href="https://open.spotify.com/user/x5k7sx0wzv6x9kiw6a6hei6pj?si=3558477d75ce4c72">Spotify</a></li>
-                <li><a href="https://www.youtube.com/channel/UCgbEvwvvGhxDNu-iwyf2jJQ">Youtube</a></li>
-                <li><a href="https://www.pinterest.fr/Kimurakaa/">Pinterest</a></li>
+            <ul class="space-y-3 ">
+                <li class="notes__social-link"><a href="https://apps.apple.com/us/app/airbuds-widget/id1638906106">Airbuds</a></li>
+                <li class="notes__social-link"><a href="https://open.spotify.com/user/x5k7sx0wzv6x9kiw6a6hei6pj?si=3558477d75ce4c72">Spotify</a></li>
+                <li class="notes__social-link"><a href="https://www.youtube.com/channel/UCgbEvwvvGhxDNu-iwyf2jJQ">Youtube</a></li>
+                <li class="notes__social-link"><a href="https://www.pinterest.fr/Kimurakaa/">Pinterest</a></li>
             </ul>
         </div>
 
-        <div v-for="uneNotes in listeNotes" v-bind="{ ...uneNotes }">
-            <img :src="urlImg0" alt="Image notes">
+        <div class="notes__grille">
+            <div v-for="uneNote in listeNotes" :v-key="uneNote.id" v-bind="{ ...uneNote }">
+                <img :src="pb.getFileUrl(uneNote, uneNote.image)" :alt="uneNote.name + ' notes'">
+            </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+.notes__grille {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    padding: 6vh 0 6vh 0;
+}
+@media (min-width: 768px) {
+    .notes__grille {
+        grid-template-columns: 1fr 1fr;
+        gap: 7vh;
+        padding: 6vh;
+    }
+}
+.notes__social-link {
+    text-decoration: underline;
+    opacity: 0.7;
+    transition: all 0.25s;
+}
+.notes__social-link:hover {
+    opacity: 1;
+}
+</style>

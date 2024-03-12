@@ -16,11 +16,15 @@ onMounted(() => {
 
   // Fonction pour agrandir le curseur
   function cursorHover() {
-    cursor.classList.add('large');
+    if (cursor) {
+      cursor.classList.add('large');
+    }
   }
   // Fonction pour rétablir la taille normale du curseur
   function resetCursor() {
-    cursor.classList.remove('large');
+    if (cursor) {
+      cursor.classList.remove('large');
+    }
   }
 
   // Liste des éléments
