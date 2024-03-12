@@ -191,7 +191,7 @@ body:active .cursor { /* Curseur agrandi au clic */
 .notes__social-link {
   text-decoration: underline;
   opacity: 0.7;
-  transition: all 0.25s;
+  transition: all 0.3s;
 }
 .notes__social-link:hover {
   opacity: 1;

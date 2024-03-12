@@ -15,16 +15,16 @@ const listeNotes = await allNotes();
 
         <div class="grid grid-cols-2 gap-10 sm:gap-20 text-base sm:text-[35px] mt-8 sm:mb-5">
             <ul class="text-end space-y-3 ">
-                <li class="notes__social-link"><a href="https://www.instagram.com/kimuraka.art/">Instagram</a></li>
-                <li class="notes__social-link"><a href="https://twitter.com/maelonthefluxv1">Twitter</a></li>
-                <li class="notes__social-link"><a href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
-                <li class="notes__social-link"><a href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
+                <li><a class="notes__social-link" href="https://www.instagram.com/kimuraka.art/">Instagram</a></li>
+                <li><a class="notes__social-link" href="https://twitter.com/maelonthefluxv1">Twitter</a></li>
+                <li><a class="notes__social-link" href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
+                <li><a class="notes__social-link" href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
             </ul>
             <ul class="space-y-3 ">
-                <li class="notes__social-link"><a href="https://apps.apple.com/us/app/airbuds-widget/id1638906106">Airbuds</a></li>
-                <li class="notes__social-link"><a href="https://open.spotify.com/user/x5k7sx0wzv6x9kiw6a6hei6pj?si=3558477d75ce4c72">Spotify</a></li>
-                <li class="notes__social-link"><a href="https://www.youtube.com/channel/UCgbEvwvvGhxDNu-iwyf2jJQ">Youtube</a></li>
-                <li class="notes__social-link"><a href="https://www.pinterest.fr/Kimurakaa/">Pinterest</a></li>
+                <li><a class="notes__social-link" href="https://apps.apple.com/us/app/airbuds-widget/id1638906106">Airbuds</a></li>
+                <li><a class="notes__social-link" href="https://open.spotify.com/user/x5k7sx0wzv6x9kiw6a6hei6pj?si=3558477d75ce4c72">Spotify</a></li>
+                <li><a class="notes__social-link" href="https://www.youtube.com/channel/UCgbEvwvvGhxDNu-iwyf2jJQ">Youtube</a></li>
+                <li><a class="notes__social-link" href="https://www.pinterest.fr/Kimurakaa/">Pinterest</a></li>
             </ul>
         </div>
 
