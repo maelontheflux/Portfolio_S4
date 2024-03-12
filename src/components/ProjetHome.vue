@@ -30,7 +30,7 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
         <div class="mask-project" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
 
             <div class="scrollable-content">
-                <div v-for="i in 7" class="flex items-center text-xl font-bold">
+                <div v-for="i in 20" class="flex items-center text-xl font-bold">
                     <div>{{ name }}</div>
                     <img :src="urlImg_loop" alt="">
                 </div>
@@ -55,12 +55,12 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
 }
 
 .scrollable-content {
-    animation: scrollRightToLeft 10s linear infinite;
+    animation: scrollRightToLeft 60s linear infinite;
     display: flex;
     white-space: nowrap;
 }
 
-.scrollable-content>* {
+.scrollable-content > * {
     margin-right: 30%;
 }
 
@@ -70,7 +70,7 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-500%);
     }
 }
 </style>
