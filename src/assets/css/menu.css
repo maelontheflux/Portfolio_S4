@@ -48,7 +48,8 @@
     z-index: 2;
 }
 
-.menu__nav-toggle {
+.menu__nav-toggle,
+.cross-bar__parent {
     width: 30px;
     height: 6px;
     position: relative;
@@ -56,7 +57,9 @@
 }
 
 .menu__nav-toggle-bar,
-.menu__nav-toggle-bar::before {
+.menu__nav-toggle-bar::before,
+.cross-bar,
+.cross-bar::before {
     content: "";
     width: 100%;
     height: 2px;
@@ -77,11 +80,14 @@
 }
 
 .menu-open .menu__nav-toggle-bar,
-.menu-open .menu__nav-toggle-bar::before {
+.menu-open .menu__nav-toggle-bar::before,
+.cross-bar,
+.cross-bar::before {
     transform: rotate(-135deg);
 } 
 
-.menu-open .menu__nav-toggle-bar::before {
+.menu-open .menu__nav-toggle-bar::before,
+.cross-bar::before  {
     transform: rotate(90deg);
     top: 0;
 }

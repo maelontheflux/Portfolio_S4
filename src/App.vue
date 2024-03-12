@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import { onMounted } from 'vue';
 // Import components
 import HeaderPage from './components/HeaderPage.vue';
@@ -40,7 +40,7 @@ onMounted(() => {
 
 <template>
   <header>
-    <HeaderPage />
+    <HeaderPage/>
   </header>
 
   <div>
@@ -56,6 +56,6 @@ onMounted(() => {
   </Suspense>
 
   <footer>
-    <FooterPage />
+    <FooterPage/>
   </footer>
 </template>

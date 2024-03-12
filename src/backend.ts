@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 // Import Pocketbase
 import PocketBase from 'pocketbase';
@@ -63,3 +63,15 @@ export async function ProjectStellaris(id: string) {
   return record;
 }
 // //
+
+// Etat de connexion
+export const currentUser = ref(); // Déclare currentUser en tant que référence réactive
+
+onMounted(async () => { // onMounted pour exécuter du code après que le composant est monté
+    // Écoute les changements dans le magasin d'authentification
+    pb.authStore.onChange(() => {
+        // Met à jour currentUser avec la nouvelle valeur du modèle d'authentification
+        currentUser.value = pb.authStore.model;
+    }, true); // Utilise l'option immediate pour exécuter le rappel une fois immédiatement
+});
+console.log(currentUser.value);
