@@ -9,6 +9,8 @@ const urlImg0 = img0 && pb.getFileUrl(props, img0, { thumb: '400x400' });
 const img_loop = props.image_loop;
 const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400' });
 
+const img_banner = props.image_banner;
+ const urlImg_banner = img_banner && pb.getFileUrl(props, img_banner, { thumb: '400x400' });
 
 </script>
 
@@ -26,51 +28,49 @@ const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400
             </div>
         </article>
     </RouterLink>
-    <div class="max-h-[140px] w-full overflow-hidden relative">
-        <div class="mask-project" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
-
-            <div class="scrollable-content">
-                <div v-for="i in 20" class="flex items-center text-xl font-bold">
-                    <div>{{ name }}</div>
-                    <img :src="urlImg_loop" alt="">
-                </div>
+    <div class="mask-project flex flex-col items-center justify-center relative w-full h-full" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
+        <div class="scrollable-content bg-main-black bg-opacity-30 text-base md:text-xl uppercase ">
+            <div v-for="i in 25" class="flex items-center font-bold text-secondary-white">
+                <h3>{{ name }}</h3>
+                <img class="w-full" :src="urlImg_loop" alt="">
             </div>
-
         </div>
     </div>
-    
+
 </template>
 
 <style scoped>
+.scrollable-content {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    animation: scroll 60s linear infinite;
+    transition: all 0.5s ease-in-out;
+}
+
+.scrollable-content h3 {
+    visibility: hidden;
+}
+
 .mask-project {
     width: 100%;
     height: 100%;
     background-size: 100%;
     background-position: center;
-    transition: all 0.5s ease-in-out;
+    background-blend-mode: darken;
 }
 
-.mask-project:hover{
+.scrollable-content:hover {
     background-color: #141414;
 }
 
-.scrollable-content {
-    animation: scrollRightToLeft 60s linear infinite;
-    display: flex;
-    white-space: nowrap;
-}
-
-.scrollable-content > * {
-    margin-right: 30%;
-}
-
-@keyframes scrollRightToLeft {
+@keyframes scroll {
     0% {
-        transform: translateX(0%);
+        transform: translate3d(0, 0, 0);
     }
 
     100% {
-        transform: translateX(-500%);
+        transform: translate3d(-40%, 0, 0);
     }
 }
 </style>

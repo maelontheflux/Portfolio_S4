@@ -64,6 +64,7 @@ export type ProjetsRecord = {
 	image3_1?: string
 	image3_2?: string
 	image3_3?: string
+	image_banner?: string
 }
 
 export type UsersRecord = {
