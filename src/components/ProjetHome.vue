@@ -10,7 +10,7 @@ const img_loop = props.image_loop;
 const urlImg_loop = img_loop && pb.getFileUrl(props, img_loop, { thumb: '400x400' });
 
 const img_banner = props.image_banner;
- const urlImg_banner = img_banner && pb.getFileUrl(props, img_banner, { thumb: '400x400' });
+const urlImg_banner = img_banner && pb.getFileUrl(props, img_banner, { thumb: '400x400' });
 
 </script>
 
@@ -28,11 +28,12 @@ const img_banner = props.image_banner;
             </div>
         </article>
     </RouterLink>
-    <div class="mask-project flex flex-col items-center justify-center relative w-full h-full" :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
-        <div class="scrollable-content bg-main-black bg-opacity-30 text-base md:text-xl uppercase ">
-            <div v-for="i in 25" class="flex items-center font-bold text-secondary-white">
-                <h3>{{ name }}</h3>
-                <img class="w-full" :src="urlImg_loop" alt="">
+    <div class="mask-project flex flex-col items-center justify-center relative w-full h-full"
+        :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
+        <div class="scrollable-content md:min-h-[140px] bg-main-black bg-opacity-30 text-lg md:text-xl uppercase ">
+            <div v-for="i in 25" class="flex items-center">
+                <h3 aria-hidden>{{ name }}</h3>
+                <img :src="urlImg_loop" alt="">
             </div>
         </div>
     </div>
@@ -57,7 +58,7 @@ const img_banner = props.image_banner;
     height: 100%;
     background-size: 100%;
     background-position: center;
-    background-blend-mode: darken;
+    overflow: hidden;
 }
 
 .scrollable-content:hover {
@@ -70,7 +71,16 @@ const img_banner = props.image_banner;
     }
 
     100% {
-        transform: translate3d(-40%, 0, 0);
+        transform: translate3d(-30%, 0, 0);
+    }
+}
+
+@media (min-width: 768px) {
+    .scrollable-content img {
+        max-width: none;
+    }
+    .scrollable-content h3 {
+        display: none;
     }
 }
 </style>
