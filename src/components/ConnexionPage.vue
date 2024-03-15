@@ -37,7 +37,7 @@ function toggleHelp() {
 </script>
 <template>
     <div v-scroll-lock="activeNotes">
-        <div class="m-2" @click="toggleNotes" tabindex="0">
+        <div class="m-6" @click="toggleNotes" tabindex="0">
             <div class="cross-bar__parent">
                 <div class="cross-bar"></div>
             </div>
