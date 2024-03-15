@@ -25,7 +25,7 @@ const activeNotes = ref(true)
 // Fonction pour ouvrir/fermer le menu
 function toggleNotes() {
     activeNotes.value = !activeNotes.value;
-    window.location.href = "/";
+    window.history.back();
 }
 
 // Variable etat help
@@ -37,8 +37,8 @@ function toggleHelp() {
 </script>
 <template>
     <div v-scroll-lock="activeNotes">
-        <div class="m-6" @click="toggleNotes" tabindex="0">
-            <div class="cross-bar__parent">
+        <div class="" @click="toggleNotes" tabindex="0">
+            <div class="cross-bar__parent sm:right-11">
                 <div class="cross-bar"></div>
             </div>
         </div>

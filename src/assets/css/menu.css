@@ -65,7 +65,7 @@
     height: 2px;
     background-color: black;
     position: absolute;
-    border-radius: 15px;
+    border-radius: 2px;
     transition-duration: 0.5s;
     z-index: 3;
 }
@@ -84,6 +84,7 @@
 .cross-bar,
 .cross-bar::before {
     transform: rotate(-135deg);
+    height: 3px;
 } 
 
 .menu-open .menu__nav-toggle-bar::before,
@@ -102,4 +103,15 @@
         border: none;
         border-bottom: 1px solid black;
     }
+}
+
+.cross-bar,
+.cross-bar::before {
+    background-color: white;
+}
+
+.cross-bar__parent {
+    position: absolute;
+    top: 5%;
+    right: 5%;
 }
