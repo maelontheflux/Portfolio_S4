@@ -44,7 +44,7 @@ function toggleHelp() {
         </div>
 
         <div class="flex justify-center items-center h-screen -mt-10">
-            <form class="grid">
+            <form @submit.prevent="doLogin" class="grid">
                 <div class="">
                     <label for="password" class="text-[40px]">Enter password</label>
                     <div class="mt-10">
@@ -56,7 +56,7 @@ function toggleHelp() {
                         </div>
                     </div>
                 </div>
-                <button type="button" @click="doLogin" class="text-center text-base duration-300 mt-10">
+                <button type="submit" @click="doLogin" class="text-center text-base duration-300 mt-10">
                     Decline my identity
                 </button>
             </form>
