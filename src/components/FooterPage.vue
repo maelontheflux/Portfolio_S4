@@ -35,7 +35,6 @@ function deactivateMenu() {
       </div>
     </div>
     <div class="text-end relative">
-      <span class="sm:text-base font-medium mr-2">EN</span>
       <div class="w-max absolute sm:bottom-0 right-0 items-center">
         <p class="text-start origin-bottom-right rotate-[-90deg] sm:text-base ease-in duration-500 opacity-100" @mouseenter="activateMenu" @mouseleave="deactivateMenu" :class="{ '!opacity-0' : activeMenu }">FOLLOW THE CONTENT</p>
         <nav class="invisible opacity-0 ease-in duration-500" :class="{ '!visible opacity-100' : activeMenu }">

@@ -34,7 +34,7 @@ function toggleMenu() {
         {{ currentTime }}
       </li>
       <li class="menu__item sm:text-xl">
-        <RouterLink to="/" class="menu__link" @click="toggleMenu">Projets</RouterLink>
+        <RouterLink to="/" class="menu__link" @click="toggleMenu">Projects</RouterLink>
       </li>
       <li class="menu__item sm:text-xl">
         <RouterLink to="/about" class="menu__link" @click="toggleMenu">About</RouterLink>
@@ -42,8 +42,8 @@ function toggleMenu() {
       <li class="menu__item sm:text-xl">
         <RouterLink to="/notes" class="menu__link" @click="toggleMenu">Notes</RouterLink>
       </li>
-      <li class="menu__item sm:text-xl underline">
-        <a href="mailto:mael.gsn01@gmail.com" class="menu__link" @click="toggleMenu">Contact</a>
+      <li class="menu__item sm:text-xl">
+        <RouterLink to="/contact" class="menu__link" @click="toggleMenu">Contact</RouterLink>
       </li>
       <li class="max-sm:hidden menu__center-pts bg-secondary-white"></li>
     </ul>

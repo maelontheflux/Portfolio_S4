@@ -16,7 +16,7 @@ const doLogin = async () => {
         // console.log(pb.authStore.model);
         currentUser.value = pb.authStore.model
     } catch (error) {
-        alert((error as Error).message);
+        (error as Error).message;
     }
 }
 
@@ -50,8 +50,8 @@ function toggleHelp() {
                     <input v-model="password" type="password" name="password" id="password" autocomplete="none"
                         placeholder="Here" required class="w-full input__contact input__note">
                     <div @click="toggleHelp" class="mt-2">
-                        <span v-if="!activeHelp">Help</span>
-                        <span v-else>4 digits on the site</span>
+                        <span v-if="!activeHelp">Help ?</span>
+                        <span v-else>"4 digits" & "*" on the site</span>
                     </div>
                 </div>
                 <button @click="doLogin" class="text-center text-base duration-300 mt-10">

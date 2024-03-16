@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterView, useRouter } from 'vue-router'
 import { onMounted } from 'vue';
 // Import components
 import HeaderPage from './components/HeaderPage.vue';
@@ -7,7 +6,6 @@ import FooterPage from './components/FooterPage.vue';
 // Cursor
 onMounted(() => {
   const cursor = document.querySelector('.cursor');
-  const router = useRouter();
 
   document.addEventListener('mousemove', e => {
     if (cursor) {
@@ -32,23 +30,16 @@ onMounted(() => {
   const interactiveElements = document.querySelectorAll('a, button, .interactive');
 
   // Appliquer les écouteurs d'événements à chaque élément
-  interactiveElements.forEach(function (element) { 
-    element.addEventListener('mouseenter', cursorHover); 
+  interactiveElements.forEach(function (element) {
+    element.addEventListener('mouseenter', cursorHover);
     element.addEventListener('mouseleave', resetCursor);
   });
-
-  // // Animation de défilement
-  // router.beforeEach((to, from, next) => {
-  //     // Declenche l'animation de défilement vers le bas
-  //     document.body.classList.add('scroll-down-animation');
-  //     setTimeout(next, 400); // Duree de l'animation
-  //   });
 });
 </script>
 
 <template>
   <header>
-    <HeaderPage/>
+    <HeaderPage />
   </header>
 
   <div>
@@ -60,7 +51,7 @@ onMounted(() => {
   </div>
 
   <Suspense>
-    <transition name="slide" mode="out-in">
+    <transition name="fade" mode="out-in">
       <RouterView />
     </transition>
   </Suspense>
@@ -71,5 +62,14 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
+/* Style fade onMounted */
+.fade-enter-active, 
+.fade-leave-active {
+  transition: opacity 0.5s, transform 1s;
+}
+.fade-enter-from, 
+.fade-leave-to {
+  opacity: 0;
+}
+/* */
 </style>

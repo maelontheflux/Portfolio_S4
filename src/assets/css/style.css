@@ -95,13 +95,14 @@ a::after {
 .cover__mask {
   mask-image: url('/img/test.png');
   mask-size: 100%;
- mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 .cover__parent {
   position: relative;
   contain: content;
   background-image: url('/img/GLASS_COLOR_PLANT_OFF.png');
   max-width: 100%;
+  background-size: cover;
 }
 .cover__rectangle {
   position: absolute;
@@ -215,7 +216,7 @@ input#password::placeholder {
 }
 .label__contact {
   font-weight: 500;
-  cursor: pointer;
+  cursor: none;
 }
 .list__input input[type="checkbox"] {
   position: absolute;
@@ -273,17 +274,5 @@ input#password::placeholder {
   .scrollable-content h3 {
       display: none;
   }
-}
-/* */
-
-/* Style Slide */
-.slide-enter-active, 
-.slide-leave-active {
-  transition: opacity 0.1s, transform 1s;
-}
-.slide-enter-from, 
-.slide-leave-to {
-  opacity: 0;
-  transform: translateY(-100%);
 }
 /* */
