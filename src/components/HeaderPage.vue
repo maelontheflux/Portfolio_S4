@@ -16,7 +16,7 @@ function toggleMenu() {
 
 <template>
   <div class="p-5 sm:px-10 flex justify-between flex-wrap items-center font-bold sm:text-lg">
-    <a href="/">Maël Grosjean</a>
+    <RouterLink to="/">Maël Grosjean</RouterLink>
     <div class="max-sm:hidden current-time flex items-center gap-2 font-medium">
       <icon_world class="w-6 h-6 sm:w-8 sm:h-8" />
       {{ currentTime }}
@@ -34,7 +34,7 @@ function toggleMenu() {
     </div>
     <ul class="menu menu__list text-[40px] sm:text-xl" v-scroll-lock="activeMenu">
       <li class="menu__item">
-        <RouterLink to="/#projets" class="menu__link" @click="toggleMenu">Projets</RouterLink>
+        <RouterLink to="/" class="menu__link" @click="toggleMenu">Projets</RouterLink>
       </li>
       <li class="menu__item">
         <RouterLink to="/about" class="menu__link" @click="toggleMenu">About</RouterLink>

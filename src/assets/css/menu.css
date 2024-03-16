@@ -12,8 +12,8 @@
     text-align: center;
     align-items: center;
     z-index: 2;
-    transition: all 2.2s;
-    opacity: 0;
+    transition: all 1s;
+    transform: translateY(-100%);
 }
 
 .menu__link,
@@ -76,7 +76,7 @@
 
 .menu-open .menu {
     visibility: visible;
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu-open .menu__nav-toggle-bar,

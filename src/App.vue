@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView, useRoute } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 import { onMounted } from 'vue';
 // Import components
 import HeaderPage from './components/HeaderPage.vue';
@@ -7,6 +7,7 @@ import FooterPage from './components/FooterPage.vue';
 // Cursor
 onMounted(() => {
   const cursor = document.querySelector('.cursor');
+  const router = useRouter();
 
   document.addEventListener('mousemove', e => {
     if (cursor) {
@@ -35,6 +36,13 @@ onMounted(() => {
     element.addEventListener('mouseenter', cursorHover); 
     element.addEventListener('mouseleave', resetCursor);
   });
+
+  // // Animation de défilement
+  // router.beforeEach((to, from, next) => {
+  //     // Declenche l'animation de défilement vers le bas
+  //     document.body.classList.add('scroll-down-animation');
+  //     setTimeout(next, 400); // Duree de l'animation
+  //   });
 });
 </script>
 
@@ -52,10 +60,16 @@ onMounted(() => {
   </div>
 
   <Suspense>
-    <RouterView />
+    <transition name="slide" mode="out-in">
+      <RouterView />
+    </transition>
   </Suspense>
 
   <footer>
-    <FooterPage/>
+    <FooterPage />
   </footer>
 </template>
+
+<style scoped>
+
+</style>

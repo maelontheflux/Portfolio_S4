@@ -275,3 +275,15 @@ input#password::placeholder {
   }
 }
 /* */
+
+/* Style Slide */
+.slide-enter-active, 
+.slide-leave-active {
+  transition: opacity 0.1s, transform 1s;
+}
+.slide-enter-from, 
+.slide-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+/* */

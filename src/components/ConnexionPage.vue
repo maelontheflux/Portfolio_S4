@@ -45,18 +45,16 @@ function toggleHelp() {
 
         <div class="flex justify-center items-center h-screen -mt-10">
             <form @submit.prevent="doLogin" class="grid">
-                <div class="">
-                    <label for="password" class="text-[40px]">Enter password</label>
-                    <div class="mt-10">
-                        <input v-model="password" type="password" name="password" id="password" autocomplete="none"
-                            placeholder="Here" required class="w-full input__contact input__note">
-                        <div @click="toggleHelp" class="mt-2">
-                            <span v-if="!activeHelp">Help</span>
-                            <span v-else>4 digits on the site</span>
-                        </div>
+                <label for="password" class="text-[40px]">Enter password</label>
+                <div class="mt-10">
+                    <input v-model="password" type="password" name="password" id="password" autocomplete="none"
+                        placeholder="Here" required class="w-full input__contact input__note">
+                    <div @click="toggleHelp" class="mt-2">
+                        <span v-if="!activeHelp">Help</span>
+                        <span v-else>4 digits on the site</span>
                     </div>
                 </div>
-                <button type="submit" @click="doLogin" class="text-center text-base duration-300 mt-10">
+                <button @click="doLogin" class="text-center text-base duration-300 mt-10">
                     Decline my identity
                 </button>
             </form>
