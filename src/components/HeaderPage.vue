@@ -27,25 +27,25 @@ function toggleMenu() {
       </div>
     </div>
   </div>
-  <nav class="menu bg-secondary-white text-main-black">
-    <div class="sm:hidden absolute top-10 left-[50%] center flex items-center gap-2 font-medium">
-      <icon_world class="w-6 h-6 sm:w-8 s:h-8" />
-      {{ currentTime }}
-    </div>
-    <ul class="menu menu__list text-[40px] sm:text-xl" v-scroll-lock="activeMenu">
-      <li class="menu__item">
+  <nav class="">
+    <ul class="menu bg-secondary-white text-main-black" v-scroll-lock="activeMenu">
+      <li class="sm:hidden absolute top-10 left-[50%] center flex items-center gap-2 font-medium">
+        <icon_world class="w-6 h-6 sm:w-8 s:h-8" />
+        {{ currentTime }}
+      </li>
+      <li class="menu__item sm:text-xl">
         <RouterLink to="/" class="menu__link" @click="toggleMenu">Projets</RouterLink>
       </li>
-      <li class="menu__item">
+      <li class="menu__item sm:text-xl">
         <RouterLink to="/about" class="menu__link" @click="toggleMenu">About</RouterLink>
       </li>
-      <li class="menu__item">
+      <li class="menu__item sm:text-xl">
         <RouterLink to="/notes" class="menu__link" @click="toggleMenu">Notes</RouterLink>
       </li>
-      <li class="menu__item underline">
+      <li class="menu__item sm:text-xl underline">
         <a href="mailto:mael.gsn01@gmail.com" class="menu__link" @click="toggleMenu">Contact</a>
       </li>
+      <li class="max-sm:hidden menu__center-pts bg-secondary-white"></li>
     </ul>
-    <div class="max-sm:hidden menu__center-pts bg-secondary-white"></div>
   </nav>
 </template>
