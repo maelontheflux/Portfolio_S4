@@ -2,8 +2,14 @@
 import { pb, ProjectCrac } from '@/backend';
 import { shuffle } from '@/animation'
 
+import icon_Photoshop from '@/components/icons/icon_Photoshop.vue';
+import icon_Illustrator from '@/components/icons/icon_Illustrator.vue';
+import icon_Lightroom from '@/components/icons/icon_Lightroom.vue';
+import icon_Figma from '@/components/icons/icon_Figma.vue';
+import icon_DesignThinking from '@/components/icons/icon_DesignThinking.vue';
+
 const props = defineProps<{
-  id: string
+    id: string
 }>();
 const projet = await ProjectCrac(props.id);
 
@@ -74,7 +80,8 @@ function handleMouseEnterThd(index: number) {
     <div class="project__page">
         <img class="" :src="urlImg_hero" alt="Image d'illustration principal du projet">
         <div class="px-4 py-5 sm:px-14 sm:py-14">
-            <div class="text-center font-bold text-[30px] sm:text-[75px]" @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
+            <div class="text-center font-bold text-[30px] sm:text-[75px]"
+                @mouseenter="shuffle($event.target as HTMLElement)">{{ projet.name }}</div>
             <div class="text-end mt-10 sm:mt-20">
                 <div class="">{{ projet.type }}</div>
                 <div class="-mt-1">{{ projet.categorie }}</div>
@@ -102,22 +109,31 @@ function handleMouseEnterThd(index: number) {
             <div class="flex mt-16 sm:mt-36 w-[80%] lg:w-[58%]">
                 <img id="img--scd1" class="animate--anim opacity-100 z-50" :src="urlImg2_1" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg2_2" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg2_3" alt="Image du projet"
-                    @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
-               </div>
+                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg2_2"
+                    alt="Image du projet" @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
+                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg2_3"
+                    alt="Image du projet" @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
+            </div>
             <div class="flex justify-end">
                 <div class="text-end max-w-[800px] mt-14 sm:mt-40">{{ projet.description4 }}</div>
             </div>
             <div class="flex mt-16 sm:mt-36 mb-16 w-[80%] lg:w-[58%]">
                 <img id="img--thd1" class="animate--anim opacity-100 z-50" :src="urlImg3_1" alt="Image du projet"
                     @mouseenter="handleMouseEnterThd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--thd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg3_2" alt="Image du projet"
-                    @mouseenter="handleMouseEnterThd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--thd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg3_3" alt="Image du projet"
-                    @mouseenter="handleMouseEnterThd(3)" @mouseleave="handleMouseLeave">
-                </div>
+                <img id="img--thd2" class="animate--anim opacity-100 z-40 -ml-[90%]" :src="urlImg3_2"
+                    alt="Image du projet" @mouseenter="handleMouseEnterThd(2)" @mouseleave="handleMouseLeave">
+                <img id="img--thd3" class="animate--anim opacity-100 z-30 -ml-[90%]" :src="urlImg3_3"
+                    alt="Image du projet" @mouseenter="handleMouseEnterThd(3)" @mouseleave="handleMouseLeave">
+            </div>
+            <div class="text-center md:mt-32">
+                <h2 class="text-lg sm:text-[60px] font-normal">Skills Used</h2>
+                <ul class="flex justify-center sm:gap-6 w-5/6 max-w-[580px] mx-auto mt-2 sm:mt-10">
+                    <li><icon_Photoshop class="w-full"/></li>
+                    <li><icon_Lightroom class="w-full"/></li>
+                    <li><icon_Illustrator class="w-full"/></li>
+                    <li><icon_Figma class="w-full"/></li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>

@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/core": "^10.9.0",
     "gsap": "^3.12.5",
     "pocketbase": "^0.21.1",
     "smooth-scroll": "^16.1.3",

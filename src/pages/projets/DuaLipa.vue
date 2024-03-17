@@ -2,6 +2,12 @@
 import { pb, ProjectDuaLipa } from '@/backend';
 import { shuffle } from '@/animation'
 
+import icon_Photoshop from '@/components/icons/icon_Photoshop.vue';
+import icon_Illustrator from '@/components/icons/icon_Illustrator.vue';
+import icon_Lightroom from '@/components/icons/icon_Lightroom.vue';
+import icon_Figma from '@/components/icons/icon_Figma.vue';
+import icon_DesignThinking from '@/components/icons/icon_DesignThinking.vue';
+
 const props = defineProps<{
   id: string
 }>();
@@ -88,6 +94,14 @@ function handleMouseEnterScd(index: number) {
                     @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
                 <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[91%]" :src="urlImg2_3" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
+            </div>
+            <div class="text-center md:mt-32">
+                <h2 class="text-lg sm:text-[60px] font-normal">Skills Used</h2>
+                <ul class="flex justify-center sm:gap-6 w-5/6 max-w-[580px] mx-auto mt-2 sm:mt-10">
+                    <li><icon_Photoshop class="w-full"/></li>
+                    <li><icon_Lightroom class="w-full"/></li>
+                    <li><icon_Illustrator class="w-full"/></li>
+                </ul>
             </div>
         </div>
     </div>
