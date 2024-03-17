@@ -91,10 +91,6 @@ a::after {
 }
 /* */
 
-/* Home page Hero */
-
-/* */
-
 /* Time */
 @layer components {
   .current-time {
