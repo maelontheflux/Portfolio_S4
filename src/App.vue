@@ -38,9 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header>
-    <HeaderPage />
-  </header>
+  <HeaderPage />
 
   <div>
     <div class="cursor">
