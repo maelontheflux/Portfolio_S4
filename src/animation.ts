@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import { ref } from 'vue';
 //
 
 // Fonction pour animer le texte
@@ -41,4 +42,3 @@ export function shuffle(input : HTMLElement) {
         }, 400);
     });
 }
-
