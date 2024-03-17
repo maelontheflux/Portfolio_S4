@@ -88,11 +88,11 @@ function handleMouseEnterScd(index: number) {
                 <div class="text-end max-w-[1000px] mt-14 sm:mt-40">{{ projet.description3 }}</div>
             </div>
             <div class="flex mt-16 sm:mt-36 mb-16 w-[80%] lg:w-[70%]">
-                <img id="img--scd1" class="animate--anim opacity-100 z-50" :src="urlImg2_1" alt="Image du projet"
+                <img id="img--scd1" class="animate--anim opacity-100 z-30" :src="urlImg2_1" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[91%]" :src="urlImg2_2" alt="Image du projet"
+                <img id="img--scd2" class="animate--anim opacity-100 z-20 -ml-[91%]" :src="urlImg2_2" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[91%]" :src="urlImg2_3" alt="Image du projet"
+                <img id="img--scd3" class="animate--anim opacity-100 z-10 -ml-[91%]" :src="urlImg2_3" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
             </div>
             <div class="text-center md:mt-32">

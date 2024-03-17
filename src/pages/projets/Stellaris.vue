@@ -92,22 +92,22 @@ function handleMouseEnterScd(index: number) {
                 <div class="text-end max-w-[1300px] mt-14 sm:mt-40">{{ projet.description3 }}</div>
             </div>
             <div class="flex mt-16 sm:mt-36 mb-16 w-[65%] lg:w-[40%]">
-                <img id="img--scd1" class="animate--anim opacity-100 z-50 drop-shadow-2xl" :src="urlImg2_1" alt="Image du projet"
+                <img id="img--scd1" class="animate--anim opacity-100 zexclude drop-shadow-2xl" :src="urlImg2_1" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(1)" @mouseleave="handleMouseLeave">
-                <img id="img--scd2" class="animate--anim opacity-100 z-40 -ml-[90%] drop-shadow-2xl" :src="urlImg2_2" alt="Image du projet"
+                <img id="img--scd2" class="animate--anim opacity-100 zexclude -ml-[90%] drop-shadow-2xl" :src="urlImg2_2" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(2)" @mouseleave="handleMouseLeave">
-                <img id="img--scd3" class="animate--anim opacity-100 z-30 -ml-[90%] drop-shadow-2xl" :src="urlImg2_3" alt="Image du projet"
+                <img id="img--scd3" class="animate--anim opacity-100 zexclude -ml-[90%] drop-shadow-2xl" :src="urlImg2_3" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(3)" @mouseleave="handleMouseLeave">
-                <img id="img--scd4" class="animate--anim opacity-100 z-20 -ml-[90%] drop-shadow-2xl" :src="urlImg2_4" alt="Image du projet"
+                <img id="img--scd4" class="animate--anim opacity-100 zexclude -ml-[90%] drop-shadow-2xl" :src="urlImg2_4" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(4)" @mouseleave="handleMouseLeave">
-                <img id="img--scd5" class="animate--anim opacity-100 z-10 -ml-[90%] drop-shadow-2xl" :src="urlImg2_5" alt="Image du projet"
+                <img id="img--scd5" class="animate--anim opacity-100 zexclude -ml-[90%] drop-shadow-2xl" :src="urlImg2_5" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(5)" @mouseleave="handleMouseLeave">
                 <img id="img--scd6" class="animate--anim opacity-100 -ml-[90%] drop-shadow-2xl" :src="urlImg2_6" alt="Image du projet"
                     @mouseenter="handleMouseEnterScd(6)" @mouseleave="handleMouseLeave">
             </div>
             <div class="text-center md:mt-32">
                 <h2 class="text-lg sm:text-[60px] font-normal">Skills Used</h2>
-                <ul class="flex justify-center sm:gap-6 w-5/6 max-w-[580px] mx-auto mt-2 sm:mt-10">
+                <ul class="flex justify-center gap-6 w-5/6 max-w-[580px] mx-auto mt-2 sm:mt-10">
                     <li><icon_Photoshop class="w-full"/></li>
                     <li><icon_Lightroom class="w-full"/></li>
                     <li><icon_Illustrator class="w-full"/></li>
@@ -118,3 +118,21 @@ function handleMouseEnterScd(index: number) {
         </div>
     </div>
 </template>
+
+<style scoped>
+.zexclude:nth-child(1) {
+  z-index: 6;
+}
+.zexclude:nth-child(2) {
+  z-index: 5;
+}
+.zexclude:nth-child(3) {
+  z-index: 4;
+}
+.zexclude:nth-child(4) {
+  z-index: 3;
+}
+.zexclude:nth-child(5) {
+  z-index: 2;
+}
+</style>

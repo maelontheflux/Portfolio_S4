@@ -16,7 +16,7 @@ const urlImg_banner = img_banner && pb.getFileUrl(props, img_banner, { thumb: '4
 
 <template>
     <RouterLink :to="'/projets/' + page_name">
-        <article class="interactive relative">
+        <article class="cursor-interaction relative">
             <img class="-mb-1" :src="urlImg0" :alt="name + 'cover'">
             <div
                 class="absolute bottom-[5%] left-[4%] uppercase text-sm md:text-[35px] font-bold text-secondary-white mix-blend-difference">

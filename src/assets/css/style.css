@@ -1,5 +1,6 @@
 /* Import style */
 @import url('menu.css');
+@import url('loader.css');
 
 /* Style TailwindCSS */
 @tailwind base;
@@ -33,6 +34,7 @@ body, a, button {
 header {
     color: #333333;
     background-color: #edeae6;
+    z-index: 1000;
 }
 
 footer {
