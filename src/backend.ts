@@ -1,11 +1,11 @@
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
 // Import Pocketbase
 import PocketBase from 'pocketbase';
 // PocketBase vps connection
 var pocketbase_ip=''
 if(import.meta.env.MODE === 'production')
-  pocketbase_ip=''
+  pocketbase_ip='http://193.168.146.45:80'
 else
   pocketbase_ip='http://127.0.0.1:8090'
 
