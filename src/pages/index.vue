@@ -18,7 +18,7 @@ const projects = await allProject();
     </div>
   </div>
 
-  <section id="projets">
+  <section id="projects">
     <ProjetHome v-for="project in projects" v-bind="{ ...project }" />
   </section>
 </template>

@@ -34,7 +34,7 @@ function toggleMenu() {
         {{ currentTime }}
       </li>
       <li class="menu__item sm:text-xl">
-        <RouterLink to="/" class="menu__link" @click="toggleMenu">Projects</RouterLink>
+        <RouterLink :to="{ path: '/', hash: 'projects' }" class="menu__link" @click="toggleMenu">Projects</RouterLink>
       </li>
       <li class="menu__item sm:text-xl">
         <RouterLink to="/about" class="menu__link" @click="toggleMenu">About</RouterLink>

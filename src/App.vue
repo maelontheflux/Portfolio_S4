@@ -51,25 +51,10 @@ onMounted(() => {
   </div>
 
   <Suspense>
-    <transition name="fade" mode="out-in">
       <RouterView />
-    </transition>
   </Suspense>
 
   <footer>
     <FooterPage />
   </footer>
 </template>
-
-<style scoped>
-/* Style fade onMounted */
-.fade-enter-active, 
-.fade-leave-active {
-  transition: opacity 0.5s, transform 1s;
-}
-.fade-enter-from, 
-.fade-leave-to {
-  opacity: 0;
-}
-/* */
-</style>
