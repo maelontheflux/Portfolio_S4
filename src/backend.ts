@@ -5,7 +5,7 @@ import PocketBase from 'pocketbase';
 // PocketBase vps connection
 var pocketbase_ip=''
 if(import.meta.env.MODE === 'production')
-  pocketbase_ip='http://193.168.146.45:80'
+  pocketbase_ip='http://85.215.162.153:80'
 else
   pocketbase_ip='http://127.0.0.1:8090'
 
