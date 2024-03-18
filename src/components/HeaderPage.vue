@@ -21,6 +21,9 @@ const dirTop = ref(true)
 watch(y, (y, oldY) => {
   dirTop.value = y < oldY
 })
+
+const isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
 </script>
 
 <template>
@@ -63,3 +66,12 @@ watch(y, (y, oldY) => {
     </nav>
   </header>
 </template>
+
+<style>
+/* Style spécifique pour iOS avec le header fixé */
+.fixed-ios {
+  position: -webkit-sticky; /* Position fixe */
+  position: sticky; /* Position fixe pour les autres navigateurs */
+  top: 0;
+}
+</style>
