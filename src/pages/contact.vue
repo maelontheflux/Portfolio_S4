@@ -52,7 +52,7 @@ async function sendEmail() {
 </script>
 
 <template>
-    <div class="bg-main-black text-secondary-white p-6 sm:p-20">
+    <div class="bg-main-black text-secondary-white p-6 sm:p-20 pt-24 sm:pt-40">
         <div class="font-medium md:text-center text-base sm:text-[40px]">
             <h1>Let’s connect and creating together !</h1>
             <p class="mt-2 md:mt-5 sm:mb-4">Contact me and tell me about your project</p>

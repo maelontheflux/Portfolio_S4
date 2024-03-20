@@ -37,7 +37,7 @@ const isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
         <icon_world class="w-6 h-6 sm:w-8 sm:h-8" />
         {{ currentTime }}
       </div>
-      <div class="menu__parent m-2" @click="toggleMenu" tabindex="0">
+      <div class="m-2" @click="toggleMenu" tabindex="0">
         <div class="menu__nav-toggle">
           <div class="menu__nav-toggle-bar"></div>
         </div>
