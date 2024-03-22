@@ -29,8 +29,7 @@ function deactivateMenu() {
         <p class="-mt-6">Grosjean</p>
       </div>
       <div class="sm:text-base self-end lg:mt-[40%]">
-        <p>Want to know more or have a</p>
-        <p class="-mt-1 -mb-1 sm:-mt-2 sm:-mb-2">project in mind ?</p>
+        <p class="max-w-[300px]">Want to know more or have a project in mind ?</p>
         <a href="mailto:mael.gsn01@gmail.com" class="underline link">Let's Connect</a>
       </div>
     </div>
