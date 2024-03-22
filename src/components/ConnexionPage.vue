@@ -51,7 +51,7 @@ function toggleHelp() {
                         placeholder="Here" required class="w-full input__contact input__note">
                     <div @click="toggleHelp" class="mt-2">
                         <span v-if="!activeHelp">Help ?</span>
-                        <span v-else>"4 digits" & "*" on the site</span>
+                        <span v-else>check behind my name...</span>
                     </div>
                 </div>
                 <button @click="doLogin" class="text-center text-base duration-300 mt-10">

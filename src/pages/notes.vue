@@ -19,8 +19,8 @@ const listeNotes = await allNotes();
             </div>
             <div class="grid grid-cols-2 gap-10 sm:gap-20 text-base sm:text-[35px] mt-8 sm:mb-5">
                 <ul class="text-end space-y-3 ">
-                    <li><a class="notes__social-link" href="https://www.instagram.com/kimuraka.art/">Instagram</a></li>
-                    <li><a class="notes__social-link" href="https://twitter.com/maelonthefluxv1">Twitter</a></li>
+                    <li><a class="notes__social-link" href="https://www.instagram.com/kimuraka_art/">Instagram</a></li>
+                    <li><a class="notes__social-link" href="https://twitter.com/kimuraka_art">Twitter</a></li>
                     <li><a class="notes__social-link" href="https://soundcloud.com/maelspkcleclan">Soundcloud</a></li>
                     <li><a class="notes__social-link" href="https://letterboxd.com/maelontheflux/">Letterbox</a></li>
                 </ul>
@@ -32,7 +32,7 @@ const listeNotes = await allNotes();
                     </li>
                     <li><a class="notes__social-link"
                             href="https://www.youtube.com/channel/UCgbEvwvvGhxDNu-iwyf2jJQ">Youtube</a></li>
-                    <li><a class="notes__social-link" href="https://www.pinterest.fr/Kimurakaa/">Pinterest</a></li>
+                    <li><a class="notes__social-link" href="https://www.pinterest.fr/Kimuraka_art/">Pinterest</a></li>
                 </ul>
             </div>
             <div class="notes__grille">
