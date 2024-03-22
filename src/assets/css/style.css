@@ -149,6 +149,9 @@ body:active .cursor { /* Curseur agrandi au clic */
   .cursor {
       display: none;
   }
+  .mask-project {
+      display: none;
+  }
 }
 /* */
 
@@ -224,7 +227,7 @@ input#password::placeholder {
   animation: scroll 60s linear infinite;
   transition: all 0.5s ease-in-out;
 }
-.scrollable-content h3 {
+.scrollable-content h3, .scrollable-content img{
   visibility: hidden;
 }
 .mask-project {
@@ -236,6 +239,9 @@ input#password::placeholder {
 }
 .scrollable-content:hover {
   background-color: #141414;
+}
+.scrollable-content:hover img{
+  visibility: visible;
 }
 @keyframes scroll {
   0% {

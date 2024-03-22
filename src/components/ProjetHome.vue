@@ -28,9 +28,8 @@ const urlImg_banner = img_banner && pb.getFileUrl(props, img_banner, { thumb: '4
             </div>
         </article>
     </RouterLink>
-    <div class="mask-project flex flex-col items-center justify-center relative w-full h-full"
-        :style="{ backgroundImage: 'url(' + urlImg0 + ')' }">
-        <div class="scrollable-content md:min-h-[140px] bg-main-black bg-opacity-30 text-lg md:text-xl uppercase ">
+    <div class="mask-project flex flex-col items-center justify-center relative w-full h-full">
+        <div class="scrollable-content md:min-h-[140px] bg-secondary-white text-lg md:text-xl uppercase ">
             <div v-for="i in 25" class="flex items-center">
                 <h3 aria-hidden>{{ name }}</h3>
                 <img :src="urlImg_loop" alt="">

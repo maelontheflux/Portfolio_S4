@@ -5,7 +5,7 @@ import PocketBase from 'pocketbase';
 // PocketBase vps connection
 var pocketbase_ip=''
 if(import.meta.env.MODE === 'production')
-  pocketbase_ip='http://portfolio.maelgrosjean.fr/'
+  pocketbase_ip='https://maelgrosjean.fr/'
 else
   pocketbase_ip='http://127.0.0.1:8090'
 
