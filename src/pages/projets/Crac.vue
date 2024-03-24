@@ -6,7 +6,7 @@ import icon_Photoshop from '@/components/icons/icon_Photoshop.vue';
 import icon_Illustrator from '@/components/icons/icon_Illustrator.vue';
 import icon_Lightroom from '@/components/icons/icon_Lightroom.vue';
 import icon_Figma from '@/components/icons/icon_Figma.vue';
-import icon_DesignThinking from '@/components/icons/icon_DesignThinking.vue';
+import icon_InDesign from '@/components/icons/icon_InDesign.vue';
 
 const props = defineProps<{
     id: string
@@ -129,6 +129,7 @@ function handleMouseEnterThd(index: number) {
                 <h2 class="text-lg sm:text-[60px] font-normal">Skills Used</h2>
                 <ul class="flex justify-center gap-2 sm:gap-6 w-4/6 max-w-[380px] mx-auto mt-2 sm:mt-10">
                     <li class="max-w-[60px] sm-max-w-[80px]"><icon_Photoshop class="w-full"/></li>
+                    <li class="max-w-[60px] sm-max-w-[80px]"><icon_InDesign class="w-full"/></li>
                     <li class="max-w-[60px] sm-max-w-[80px]"><icon_Lightroom class="w-full"/></li>
                     <li class="max-w-[60px] sm-max-w-[80px]"><icon_Illustrator class="w-full"/></li>
                     <li class="max-w-[60px] sm-max-w-[80px]"><icon_Figma class="w-full"/></li>
