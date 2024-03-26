@@ -3,7 +3,7 @@ Développé dans le cadre du projet de semestre 4 du BUT Métiers du Multimédia
 
 
 Liens utiles :
-$
+
 page accueil : https://maelgrosjean.fr/
 
 page à propos : https://maelgrosjean.fr/about/
